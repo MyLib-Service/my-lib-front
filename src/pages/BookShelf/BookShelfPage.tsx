@@ -1,12 +1,12 @@
+import { useState } from "react";
 import Header from "../../components/common/Header";
-import Tabs from "../../components/common/Tabs";
 import Search from "../../components/common/Search";
+import Tabs from "../../components/common/Tabs";
 import BooksSection from "../../components/Home/BookSection/BooksSection";
 import Setting from "../../components/Home/Setting/Setting";
-import BookLists from "../../components/Home/BookSection/BookList";
-import { useState } from "react";
 
-export default function HomePage() {
+export default function BookShelfPage() {
+  // const { id } = useParams<{ id: string }>();
   const [isGridView, setIsGridView] = useState(false);
 
   const handleGridChange = () => {
@@ -19,8 +19,7 @@ export default function HomePage() {
       <Tabs />
       <Search />
       <Setting isGridView={isGridView} onGridChange={handleGridChange} />
-      <BooksSection isGridView={isGridView} length={isGridView ? 3 : 6} />
-      <BookLists />
+      <BooksSection isGridView={isGridView} length={isGridView ? 9 : 18} />
     </>
   );
 }
