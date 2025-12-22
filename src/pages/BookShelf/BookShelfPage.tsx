@@ -3,23 +3,43 @@ import Header from "../../components/common/Header";
 import Search from "../../components/common/Search";
 import Tabs from "../../components/common/Tabs";
 import BooksSection from "../../components/Home/BookSection/BooksSection";
+import Edit from "../../components/Home/Setting/Edit";
 import Setting from "../../components/Home/Setting/Setting";
 
 export default function BookShelfPage() {
   // const { id } = useParams<{ id: string }>();
   const [isGridView, setIsGridView] = useState(false);
+  const [sortDown, setSortDown] = useState(false);
 
   const handleGridChange = () => {
     setIsGridView((isGridView) => !isGridView);
+  };
+
+  // TODO: true, false 전환은 잘 됨, 다만
+  // 1. 책을 만들 때 만드는 시간을 받아야 최신순 정렬 가능.
+  // 2. 가나다 순 정렬 하려면 section쪽에서 전체 정렬 해야 할 듯
+  const handleDropDown = () => {
+    setSortDown((sortDown) => !sortDown);
   };
 
   return (
     <>
       <Header />
       <Tabs />
-      <Search />
-      <Setting isGridView={isGridView} onGridChange={handleGridChange} />
-      <BooksSection isGridView={isGridView} length={isGridView ? 9 : 18} />
+      <Search placeholder="책장 내 도서 검색" />
+      <Setting>
+        <Edit
+          isGridView={isGridView}
+          onGridChange={handleGridChange}
+          onsortDown={handleDropDown}
+        />
+      </Setting>
+
+      <BooksSection
+        isGridView={isGridView}
+        length={isGridView ? 9 : 18}
+        sortDown={sortDown}
+      />
     </>
   );
 }

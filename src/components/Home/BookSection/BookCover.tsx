@@ -1,7 +1,12 @@
 import styled from "@emotion/styled";
 
 export default function BookCover() {
-  return <CoverContainer>Cover</CoverContainer>;
+  return (
+    <>
+      <CoverContainer>Cover</CoverContainer>
+      <CoverContainer>Abc</CoverContainer>
+    </>
+  );
 }
 
 const CoverContainer = styled.div`

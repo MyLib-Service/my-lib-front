@@ -2,13 +2,17 @@ import styled from "@emotion/styled";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
-export default function Search() {
+interface SearchProps {
+  placeholder: string;
+}
+
+export default function Search(props: SearchProps) {
   return (
     <Section>
       <Button>
         <FaMagnifyingGlass />
       </Button>
-      <Input type="search" placeholder="서재 내 도서 검색" />
+      <Input type="search" placeholder={props.placeholder} />
       <CloseBtn>
         <IoClose />
       </CloseBtn>

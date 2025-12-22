@@ -29,7 +29,6 @@ const NavContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* width: 56px; */
 `;
 
 const Icon = styled.div<{ $active?: boolean }>`

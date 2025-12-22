@@ -5,6 +5,7 @@ import BookCover from "./BookCover";
 interface BooksSectionProps {
   length: number;
   isGridView: boolean;
+  sortDown: boolean;
 }
 
 export default function BooksSection(props: BooksSectionProps) {
