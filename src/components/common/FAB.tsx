@@ -1,9 +1,13 @@
 import styled from "@emotion/styled";
 import { FiPlus } from "react-icons/fi";
 
-export default function FAB() {
+interface FABProps {
+  onOpenModal: () => void;
+}
+
+export default function FAB(props: FABProps) {
   return (
-    <Button>
+    <Button onClick={props.onOpenModal}>
       <FiPlus />
     </Button>
   );

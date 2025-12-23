@@ -4,8 +4,21 @@ import FAB from "./components/common/FAB";
 import Layout from "./Layout";
 import HomePage from "./pages/Home/HomePage";
 import BookShelfPage from "./pages/BookShelf/BookShelfPage";
+import { useState } from "react";
+import AddBookModal from "./components/common/AddBookModal/AddBookModal";
+import Modal from "./components/common/Modal";
 
 function App() {
+  const [isAddOpen, setIsAddOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsAddOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsAddOpen(false);
+  };
+
   return (
     <>
       <Routes>
@@ -15,7 +28,13 @@ function App() {
         </Route>
       </Routes>
 
-      <FAB />
+      <FAB onOpenModal={handleOpenModal} />
+      {isAddOpen && (
+        <Modal>
+          <AddBookModal onCloseModal={handleCloseModal} />
+        </Modal>
+      )}
+
       <BottomNav />
     </>
   );

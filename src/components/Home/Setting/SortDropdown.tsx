@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 interface SortDropdownProps {
+  title: string;
   onsortDown: () => void;
 }
 
@@ -15,13 +16,24 @@ export default function SortDropdown(props: SortDropdownProps) {
       <Icon>
         <IoMdArrowDropdown />
       </Icon>
-      <Text>최신순</Text>
+      <Text>{props.title}</Text>
     </Container>
   );
 }
 
 const Container = styled.section`
   display: flex;
+  align-items: center;
+  padding-right: 8px;
+
+  &::after {
+    content: "";
+    border-right: 1px solid #000;
+    width: 1px;
+    height: 16px;
+
+    padding-left: 8px;
+  }
 `;
 
 const Icon = styled.div`

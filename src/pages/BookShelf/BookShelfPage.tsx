@@ -20,6 +20,7 @@ export default function BookShelfPage() {
   // 2. 가나다 순 정렬 하려면 section쪽에서 전체 정렬 해야 할 듯
   const handleDropDown = () => {
     setSortDown((sortDown) => !sortDown);
+    console.log(sortDown);
   };
 
   return (
@@ -29,9 +30,11 @@ export default function BookShelfPage() {
       <Search placeholder="책장 내 도서 검색" />
       <Setting>
         <Edit
+          showSort={true}
           isGridView={isGridView}
           onGridChange={handleGridChange}
           onsortDown={handleDropDown}
+          title={sortDown ? "가나다순" : "최신순"}
         />
       </Setting>
 
