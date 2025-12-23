@@ -3,12 +3,12 @@ import { IoMdArrowDropdown } from "react-icons/io";
 
 interface SortDropdownProps {
   title: string;
-  onsortDown: () => void;
+  onOpenModal: () => void;
 }
 
 export default function SortDropdown(props: SortDropdownProps) {
   const handleDropDown = () => {
-    props.onsortDown();
+    props.onOpenModal();
   };
 
   return (

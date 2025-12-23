@@ -8,7 +8,7 @@ interface EditProps {
   isGridView: boolean;
   title: string;
   onGridChange: () => void;
-  onsortDown: () => void;
+  onOpenModal: () => void;
 }
 
 export default function Edit(props: EditProps) {
@@ -21,7 +21,7 @@ export default function Edit(props: EditProps) {
       <EditBtn>편집</EditBtn>
       <RightBtn>
         {props.showSort && (
-          <SortDropdown onsortDown={props.onsortDown} title={props.title} />
+          <SortDropdown title={props.title} onOpenModal={props.onOpenModal} />
         )}
         <ViewType onClick={handleGridChange}>
           {props.isGridView ? <AiOutlinePicture /> : <HiOutlineViewBoards />}

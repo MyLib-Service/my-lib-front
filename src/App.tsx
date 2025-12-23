@@ -5,8 +5,8 @@ import Layout from "./Layout";
 import HomePage from "./pages/Home/HomePage";
 import BookShelfPage from "./pages/BookShelf/BookShelfPage";
 import { useState } from "react";
-import AddBookModal from "./components/common/AddBookModal/AddBookModal";
-import Modal from "./components/common/Modal";
+import AddBookModal from "./components/common/Modal/AddBookModal";
+import Modal from "./components/common/Modal/Modal";
 
 function App() {
   const [isAddOpen, setIsAddOpen] = useState(false);
@@ -30,8 +30,8 @@ function App() {
 
       <FAB onOpenModal={handleOpenModal} />
       {isAddOpen && (
-        <Modal>
-          <AddBookModal onCloseModal={handleCloseModal} />
+        <Modal title="책 추가" close={handleCloseModal}>
+          <AddBookModal />
         </Modal>
       )}
 
