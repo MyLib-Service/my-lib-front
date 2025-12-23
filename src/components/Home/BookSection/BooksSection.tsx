@@ -24,7 +24,7 @@ const BookList = styled.section<{ $grid: boolean }>`
     $grid ? "repeat(3, 1fr)" : "repeat(6, 1fr)"};
 
   gap: 8px 0;
-  padding: 8px 0;
+  padding-bottom: 8px;
 
   justify-items: center;
 `;

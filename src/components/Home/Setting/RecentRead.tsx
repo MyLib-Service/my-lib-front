@@ -16,7 +16,7 @@ const RecentReadContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 24px;
-  margin-top: 10px;
+  margin: 6px 0;
 `;
 
 const Title = styled.p`

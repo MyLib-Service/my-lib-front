@@ -1,10 +1,9 @@
 import { useState } from "react";
-import Header from "../../components/common/Header";
 import Search from "../../components/common/Search";
-import Tabs from "../../components/common/Tabs";
 import BooksSection from "../../components/Home/BookSection/BooksSection";
 import Edit from "../../components/Home/Setting/Edit";
 import Setting from "../../components/Home/Setting/Setting";
+import BookShelfHeader from "../../components/BookShelf/BookShelfHeader";
 
 export default function BookShelfPage() {
   // const { id } = useParams<{ id: string }>();
@@ -25,8 +24,7 @@ export default function BookShelfPage() {
 
   return (
     <>
-      <Header />
-      <Tabs />
+      <BookShelfHeader />
       <Search placeholder="책장 내 도서 검색" />
       <Setting>
         <Edit

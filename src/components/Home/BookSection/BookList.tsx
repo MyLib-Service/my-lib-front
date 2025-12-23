@@ -5,10 +5,12 @@ export default function BookLists() {
   // TODO: id 고유화하기
   const now = new Date().getTime();
 
+  const titleArray = ["소장", "재독", "이건 좀.."];
+
   return (
     <BookList>
       {Array.from({ length: 3 }).map((_, idx) => (
-        <BookDrawer key={idx} id={now} title="책장 이름" />
+        <BookDrawer key={idx} id={now} title={titleArray[idx]} />
       ))}
     </BookList>
   );
