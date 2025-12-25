@@ -34,13 +34,11 @@ const Backdrop = styled.div`
   z-index: 80;
 `;
 
-// TODO: padding 및 레이아웃 수정
 const ModalContainer = styled.section`
   display: flex;
   position: absolute;
   bottom: 0%;
   flex-wrap: wrap;
-  justify-content: space-around;
 
   background-color: #fff;
   height: 260px;
@@ -53,17 +51,20 @@ const ModalContainer = styled.section`
 `;
 
 const ModalHeader = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+  height: 64px;
   padding: 24px;
 `;
 
 const Title = styled.h1`
+  grid-column: 2;
   font-size: 16px;
   font-weight: 600;
 `;
 
 const Close = styled.div`
-  position: absolute;
-  top: 24px;
-  right: 24px;
+  justify-items: end;
   font-size: 20px;
 `;
