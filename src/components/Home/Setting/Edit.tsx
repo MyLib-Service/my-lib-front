@@ -35,7 +35,8 @@ const EditContainer = styled.div`
   align-items: center;
 
   height: 24px;
-  margin: 6px 0;
+  padding: 6px 0px;
+  margin-bottom: 6px;
 `;
 
 const EditBtn = styled.button`

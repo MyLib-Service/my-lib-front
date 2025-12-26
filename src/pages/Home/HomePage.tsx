@@ -1,11 +1,14 @@
 import Header from "../../components/common/Header";
 import Tabs from "../../components/common/Tabs";
-import Search from "../../components/common/Search";
 import HomeComponents from "../../components/Home/HomeComponents";
 import { useState } from "react";
+import ReadingState from "../../components/ReadingState/ReadingState";
+
+export type TabType = "BOOKSHELF" | "STATE";
 
 export default function HomePage() {
   const [isGridView, setIsGridView] = useState(false);
+  const [activeTab, setActiveTab] = useState<TabType>("BOOKSHELF");
 
   const handleGridChange = () => {
     setIsGridView((isGridView) => !isGridView);
@@ -14,9 +17,14 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <Tabs />
-      <Search placeholder="서재 내 도서 검색" />
-      <HomeComponents isGridView={isGridView} onGridChange={handleGridChange} />
+      <Tabs activeTab={activeTab} onChange={setActiveTab} />
+      {activeTab === "BOOKSHELF" && (
+        <HomeComponents
+          isGridView={isGridView}
+          onGridChange={handleGridChange}
+        />
+      )}
+      {activeTab === "STATE" && <ReadingState />}
     </>
   );
 }

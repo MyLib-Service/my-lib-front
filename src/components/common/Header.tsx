@@ -1,14 +1,25 @@
 import styled from "@emotion/styled";
-import { MdOutlineSettings } from "react-icons/md";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
+
+  const handleGoSearch = () => {
+    navigate(`/search`);
+  };
+
   return (
     <>
       <HeaderContainer>
+        <Hamburger>
+          <GiHamburgerMenu />
+        </Hamburger>
         <Title>내 서재</Title>
-        <SetBtn>
-          <MdOutlineSettings />
-        </SetBtn>
+        <Search onClick={handleGoSearch}>
+          <FaMagnifyingGlass />
+        </Search>
       </HeaderContainer>
     </>
   );
@@ -20,6 +31,13 @@ const HeaderContainer = styled.section`
   align-items: center;
 `;
 
+const Hamburger = styled.button`
+  grid-column: 1;
+  width: 24px;
+  height: 24px;
+  color: black;
+`;
+
 const Title = styled.h1`
   grid-column: 2;
   font-size: 18px;
@@ -27,9 +45,10 @@ const Title = styled.h1`
   padding: 8px 0;
 `;
 
-const SetBtn = styled.button`
+const Search = styled.button`
   grid-column: 3;
   justify-self: end;
-  font-size: 24px;
+  width: 24px;
+  height: 24px;
   color: black;
 `;

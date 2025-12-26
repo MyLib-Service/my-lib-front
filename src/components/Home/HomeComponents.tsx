@@ -13,7 +13,11 @@ export default function HomeComponents(props: HomeComponentsProps) {
   return (
     <>
       <Setting>
-        <Edit isGridView={props.isGridView} onGridChange={props.onGridChange} />
+        <Edit
+          isGridView={props.isGridView}
+          onGridChange={props.onGridChange}
+          sortSlot
+        />
         <RecentRead />
       </Setting>
       <BooksSection

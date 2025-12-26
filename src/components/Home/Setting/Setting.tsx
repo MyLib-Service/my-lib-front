@@ -10,9 +10,13 @@ export default function Setting(props: SettingProps) {
 }
 
 const SettingContainer = styled.section`
+  width: 100%;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+
   align-items: center;
-  width: 100%;
-  margin: 8px 0px;
+  padding: 6px 0px;
+  margin: 6px 0px;
 `;

@@ -1,10 +1,26 @@
 import styled from "@emotion/styled";
+import type { TabType } from "../../pages/Home/HomePage";
 
-export default function Tabs() {
+interface TabsProps {
+  activeTab: TabType;
+  onChange: (tab: "BOOKSHELF" | "STATE") => void;
+}
+
+export default function Tabs(props: TabsProps) {
   return (
     <TabContainer>
-      <Tab $active>책장</Tab>
-      <Tab>독서 상태</Tab>
+      <Tab
+        $active={props.activeTab === "BOOKSHELF"}
+        onClick={() => props.onChange("BOOKSHELF")}
+      >
+        책장
+      </Tab>
+      <Tab
+        $active={props.activeTab === "STATE"}
+        onClick={() => props.onChange("STATE")}
+      >
+        독서 상태
+      </Tab>
     </TabContainer>
   );
 }

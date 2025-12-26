@@ -1,10 +1,18 @@
 import styled from "@emotion/styled";
 import { MdArrowBackIos } from "react-icons/md";
-import { BsThreeDots } from "react-icons/bs";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { LuPencil } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
 
 // TODO: 나중에 firebase 연결해서 책장 이름 가져오기
 
 export default function BookShelfHeader() {
+  const navigate = useNavigate();
+
+  const handleGoSearch = () => {
+    navigate(`/search`);
+  };
+
   return (
     <Container>
       <Left>
@@ -14,9 +22,14 @@ export default function BookShelfHeader() {
         <Title>책장 이름</Title>
       </Left>
 
-      <EditBtn>
-        <BsThreeDots />
-      </EditBtn>
+      <Button>
+        <Edit>
+          <LuPencil />
+        </Edit>
+        <Search onClick={handleGoSearch}>
+          <FaMagnifyingGlass />
+        </Search>
+      </Button>
     </Container>
   );
 }
@@ -52,8 +65,16 @@ const Title = styled.h1`
   text-overflow: ellipsis;
 `;
 
-const EditBtn = styled.button`
-  font-size: 22px;
-  width: 24px;
-  height: 24px;
+const Button = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Edit = styled.button`
+  font-size: 20px;
+  margin-right: 10px;
+`;
+
+const Search = styled.button`
+  font-size: 20px;
 `;

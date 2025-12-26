@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Search from "../../components/common/Search";
 import Edit from "../../components/Home/Setting/Edit";
 import Setting from "../../components/Home/Setting/Setting";
 import BookShelfHeader from "../../components/BookShelf/BookShelfHeader";
@@ -39,7 +38,6 @@ export default function BookShelfPage() {
   return (
     <>
       <BookShelfHeader />
-      <Search placeholder="책장 내 도서 검색" />
       <Setting>
         <Edit
           isGridView={isGridView}
