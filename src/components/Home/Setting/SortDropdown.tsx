@@ -7,12 +7,8 @@ interface SortDropdownProps {
 }
 
 export default function SortDropdown(props: SortDropdownProps) {
-  const handleDropDown = () => {
-    props.onOpenModal();
-  };
-
   return (
-    <Container onClick={handleDropDown}>
+    <Container onClick={props.onOpenModal}>
       <Icon>
         <IoMdArrowDropdown />
       </Icon>

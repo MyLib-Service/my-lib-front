@@ -1,14 +1,12 @@
 import styled from "@emotion/styled";
 import { HiOutlineViewBoards } from "react-icons/hi";
 import { AiOutlinePicture } from "react-icons/ai";
-import SortDropdown from "./SortDropdown";
+import type { ReactNode } from "react";
 
 interface EditProps {
-  showSort?: boolean;
   isGridView: boolean;
-  title: string;
   onGridChange: () => void;
-  onOpenModal: () => void;
+  sortSlot: ReactNode;
 }
 
 export default function Edit(props: EditProps) {
@@ -19,10 +17,9 @@ export default function Edit(props: EditProps) {
   return (
     <EditContainer>
       <EditBtn>편집</EditBtn>
+
       <RightBtn>
-        {props.showSort && (
-          <SortDropdown title={props.title} onOpenModal={props.onOpenModal} />
-        )}
+        {props.sortSlot}
         <ViewType onClick={handleGridChange}>
           {props.isGridView ? <AiOutlinePicture /> : <HiOutlineViewBoards />}
         </ViewType>
