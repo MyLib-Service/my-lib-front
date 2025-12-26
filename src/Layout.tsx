@@ -16,5 +16,5 @@ const Main = styled.main`
   padding-top: calc(47px + env(safe-area-inset-top));
   padding-right: 24px;
   padding-left: 24px;
-  padding-bottom: calc(34px + env(safe-area-inset-bottom));
+  padding-bottom: calc(98px + env(safe-area-inset-bottom));
 `;

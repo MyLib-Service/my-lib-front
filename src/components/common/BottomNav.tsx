@@ -51,23 +51,6 @@ const BottomNavigation = styled.section`
   z-index: 10;
 `;
 
-// const BottomNavigation = styled.section`
-//   position: fixed;
-//   bottom: 34px;
-//   left: 0;
-//   right: 0;
-
-//   height: 64px;
-//   padding: 11px 28px;
-
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   background-color: #fff;
-//   z-index: 10;
-// `;
-
 const Shadow = styled.div`
   position: absolute;
   top: 0;
