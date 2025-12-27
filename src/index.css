@@ -1,10 +1,16 @@
 @import "tailwindcss";
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 @theme {
   --color-black-text: #000000;
   --color-gray-text: #666666;
   --color-gray-bg: #d9d9d9;
   --color-active: #0037ff;
+  --color-checked: #999999;
+  --font-weight-500: 500;
 }
 /*
 :root {

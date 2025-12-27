@@ -23,7 +23,7 @@ export default function Search(props: SearchProps) {
 const Section = styled.section`
   display: flex;
   height: 48px;
-  margin-top: 16px;
+  margin: 16px 0px;
 
   background-color: var(--color-gray-bg);
   border-radius: 12px;

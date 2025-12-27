@@ -9,7 +9,7 @@ import { MdOutlinePerson } from "react-icons/md";
 // TODO: src 수정
 const NAV_ITEM = [
   { label: "피드", icon: MdOutlinePeopleAlt, src: "/" },
-  { label: "검색", icon: IoMdSearch, src: "/" },
+  { label: "검색", icon: IoMdSearch, src: "/search" },
   { label: "내 서재", icon: IoHomeOutline, src: "/" },
   { label: "기록", icon: LuPencil, src: "/" },
   { label: "마이페이지", icon: MdOutlinePerson, src: "/" },
