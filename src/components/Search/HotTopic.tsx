@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import RankingItem from "./RankingItem";
 
 export default function HotTopic() {
   const date = new Date();
@@ -8,12 +9,19 @@ export default function HotTopic() {
         <Title>인기 검색어</Title>
         <NowTime>{`${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()} 기준`}</NowTime>
       </GuideContainer>
+
+      <RankingContainer>
+        {Array.from({ length: 10 }).map((_, idx) => (
+          <RankingItem key={idx} rank={idx} />
+        ))}
+      </RankingContainer>
     </Container>
   );
 }
 
 const Container = styled.section`
   display: flex;
+  flex-direction: column;
 `;
 
 const GuideContainer = styled.div`
@@ -31,4 +39,12 @@ const NowTime = styled.p`
   font-size: 14px;
   font-weight: 400;
   color: var(--color-gray-text);
+`;
+
+// TODO: 숫자 순서 바꾸기
+const RankingContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
 `;
