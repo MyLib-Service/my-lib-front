@@ -14,7 +14,7 @@ export default function CheckBox() {
 const Container = styled.section`
   display: flex;
   flex-direction: column;
-  padding-top: 8px;
+  padding-top: 10px;
 
   &::after {
     content: "";
@@ -35,7 +35,7 @@ const Input = styled.input`
 `;
 
 const Label = styled.label`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  padding-left: 4px;
+  padding-left: 8px;
 `;

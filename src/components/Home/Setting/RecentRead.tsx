@@ -19,7 +19,7 @@ const RecentReadContainer = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 `;
 

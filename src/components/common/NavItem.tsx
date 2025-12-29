@@ -40,7 +40,7 @@ const Icon = styled.div<{ $active?: boolean }>`
 `;
 
 const Label = styled.p<{ $active?: boolean }>`
-  font-size: 10px;
+  font-size: 12px;
   color: var(--color-black-text);
 
   color: ${({ $active }) =>

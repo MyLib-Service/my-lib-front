@@ -60,7 +60,7 @@ const ModalHeader = styled.div`
 
 const Title = styled.h1`
   grid-column: 2;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 `;
 

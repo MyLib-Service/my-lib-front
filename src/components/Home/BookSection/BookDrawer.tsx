@@ -29,7 +29,7 @@ const BookItem = styled.li`
   align-items: center;
   justify-content: space-between;
 
-  font-size: 14px;
+  font-size: 16px;
   height: 56px;
 
   border-top: 1px solid #eeeeee;

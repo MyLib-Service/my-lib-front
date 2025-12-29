@@ -24,7 +24,7 @@ const Container = styled.section`
 
   &::after {
     content: "";
-    border-right: 1px solid #000;
+    border-right: 1px solid #666666;
     width: 1px;
     height: 16px;
 
@@ -42,6 +42,6 @@ const Icon = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 `;

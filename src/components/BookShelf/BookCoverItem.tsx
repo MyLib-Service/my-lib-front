@@ -22,7 +22,7 @@ export default function BookCoverItem() {
 
 const Container = styled.div`
   display: flex;
-  margin-bottom: 14.5px;
+  margin-bottom: 16px;
 `;
 
 const Image = styled.img`
@@ -35,7 +35,7 @@ const ExplainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0px 16px;
+  padding: 0px 15px;
 `;
 
 const TopContainer = styled.div`
@@ -44,13 +44,17 @@ const TopContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 14px;
+  font-size: 16px;
+  white-space: normal;
+  word-break: break-all;
+  /* overflow-wrap: break-word; */
+
   font-weight: 400;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
 `;
 
 const Auth = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--color-gray-text);
 `;
@@ -67,7 +71,7 @@ const RatingImage = styled.img`
 `;
 
 const Date = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--color-gray-text);
 `;

@@ -66,6 +66,7 @@ const BookItem = styled.li`
 
 // TODO: 영어 자간은 더 늘리기
 const Text = styled.div`
+  font-size: 16px;
   writing-mode: vertical-rl;
   text-orientation: upright;
 

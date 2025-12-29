@@ -35,14 +35,14 @@ const EditContainer = styled.div`
   align-items: center;
 
   height: 24px;
-  padding: 6px 0px;
-  margin-bottom: 6px;
+  padding: 8px 0px;
+  margin-bottom: 8px;
 `;
 
 const EditBtn = styled.button`
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-gray-text);
 `;
 

@@ -17,6 +17,6 @@ const SettingContainer = styled.section`
   justify-content: space-around;
 
   align-items: center;
-  padding: 6px 0px;
-  margin: 6px 0px;
+  padding: 8px 0px;
+  margin: 8px 0px;
 `;

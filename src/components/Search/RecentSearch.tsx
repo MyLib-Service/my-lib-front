@@ -38,12 +38,12 @@ const GuideContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 `;
 
 const DeleteAll = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--color-gray-text);
 `;

@@ -30,6 +30,7 @@ const Container = styled.div`
 
 const Title = styled.li`
   list-style: none;
+  font-size: 14px;
   font-weight: 600;
   padding: 16px 0px;
 `;

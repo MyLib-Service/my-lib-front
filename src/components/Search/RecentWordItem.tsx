@@ -30,14 +30,11 @@ const Container = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
-  padding-right: 2px;
-  padding-bottom: 2px;
+  padding-right: 4px;
 `;
 
 const CloseBtn = styled.div`
-  width: 16px;
-  height: 16px;
   font-size: 16px;
 `;

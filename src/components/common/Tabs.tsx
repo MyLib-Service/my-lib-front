@@ -37,6 +37,7 @@ const Tab = styled.button<{ $active?: boolean }>`
   flex: 1;
   height: 40px;
   font-size: 18px;
+  line-height: 24px;
   cursor: pointer;
   padding-bottom: 8px;
 
