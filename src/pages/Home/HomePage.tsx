@@ -1,5 +1,5 @@
-import Header from "../../components/common/Header";
-import Tabs from "../../components/common/Tabs";
+import { Header } from "@/components/common";
+import { Tabs } from "@/components/common";
 import HomeComponents from "../../components/Home/HomeComponents";
 import { useState } from "react";
 import ReadingState from "../../components/ReadingState/ReadingState";

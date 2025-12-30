@@ -1,11 +1,7 @@
 import { useState } from "react";
-import Edit from "../../components/Home/Setting/Edit";
-import Setting from "../../components/Home/Setting/Setting";
-import BookShelfHeader from "../../components/BookShelf/BookShelfHeader";
-import Modal from "../../components/common/Modal/Modal";
-import FilterModal from "../../components/common/Modal/FilterModal";
-import BookShelfSection from "../../components/BookShelf/BookShelfSection";
-import SortDropdown from "../../components/Home/Setting/SortDropdown";
+import { Edit, SortDropdown, Setting } from "@/components/common/Controls";
+import { BookShelfHeader, BookShelfSection } from "@/components/BookShelf";
+import { Modal, FilterModal } from "@/components/common/Modal";
 
 export type FilterOption = {
   id: string;

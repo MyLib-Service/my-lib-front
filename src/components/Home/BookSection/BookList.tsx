@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import BookDrawer from "./BookDrawer";
+import { BookDrawer } from "@/components/Home/BookSection";
 
 export default function BookLists() {
   // TODO: id 고유화하기

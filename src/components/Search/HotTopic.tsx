@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import RankingItem from "./RankingItem";
+import { RankingItem } from "@/components/Search";
+
 import rankList from "../../utils/rankList";
 
 export default function HotTopic() {

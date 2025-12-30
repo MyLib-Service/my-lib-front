@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import BottomNav from "./components/common/BottomNav";
+import { BottomNav } from "@/components/common";
 import Layout from "./Layout";
 import HomePage from "./pages/Home/HomePage";
 import BookShelfPage from "./pages/BookShelf/BookShelfPage";

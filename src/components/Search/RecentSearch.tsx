@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import RecentWordItem from "./RecentWordItem";
+import { RecentWordItem } from "@/components/Search";
 
 export default function RecentSearch() {
   return (

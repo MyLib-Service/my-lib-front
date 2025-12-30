@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
-import BookBack from "./BookBack";
-import BookCover from "./BookCover";
+import { BookBack, BookCover } from "@/components/Home/BookSection";
 
 interface BooksSectionProps {
   length: number;

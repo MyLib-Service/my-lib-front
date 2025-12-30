@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import NavItem from "./NavItem";
+import { NavItem } from "@/components/common";
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { IoMdSearch } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";

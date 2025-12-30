@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import BookCoverItem from "./BookCoverItem";
-import BookBack from "../Home/BookSection/BookBack";
+import { BookCoverItem } from "@/components/BookShelf";
+import { BookBack } from "@/components/Home/BookSection";
 
 interface BookShelfSectionProps {
   isGridView: boolean;

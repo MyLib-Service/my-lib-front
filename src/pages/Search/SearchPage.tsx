@@ -1,7 +1,5 @@
-import Search from "../../components/common/Search";
-import CheckBox from "../../components/Search/CheckBox";
-import HotTopic from "../../components/Search/HotTopic";
-import RecentSearch from "../../components/Search/RecentSearch";
+import { Search } from "@/components/common";
+import { CheckBox, HotTopic, RecentSearch } from "@/components/Search";
 
 export default function SearchPage() {
   return (
