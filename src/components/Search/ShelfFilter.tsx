@@ -1,12 +1,17 @@
 import styled from "@emotion/styled";
+// import { SortDropdown } from "@/components/common/Controls";
 
-export default function CheckBox() {
+export default function ShelfFilter() {
+  // const [openModal, setOpenModal] = useState(false);
+
   return (
     <Container>
       <Check>
         <Input type="checkbox" id="MyLibrary" />
         <Label htmlFor="MyLibrary">내 서재</Label>
       </Check>
+
+      {/* <SortDropdown title='정렬' /> */}
     </Container>
   );
 }

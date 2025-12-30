@@ -39,6 +39,7 @@ export default function BookShelfPage() {
           isGridView={isGridView}
           onGridChange={handleGridChange}
           sortSlot={
+            // TODO: 전역 상태 관리
             <SortDropdown
               title={filterType.title}
               onOpenModal={() => setOpenModal(true)}
