@@ -1,8 +1,11 @@
 import styled from "@emotion/styled";
 import RankingItem from "./RankingItem";
+import rankList from "../../utils/rankList";
 
 export default function HotTopic() {
   const date = new Date();
+  const ranks = rankList();
+
   return (
     <Container>
       <GuideContainer>
@@ -11,8 +14,8 @@ export default function HotTopic() {
       </GuideContainer>
 
       <RankingContainer>
-        {Array.from({ length: 10 }).map((_, idx) => (
-          <RankingItem key={idx} rank={idx} />
+        {ranks.map((rank: number) => (
+          <RankingItem key={rank} rank={rank} />
         ))}
       </RankingContainer>
     </Container>
@@ -41,7 +44,6 @@ const NowTime = styled.p`
   color: var(--color-gray-text);
 `;
 
-// TODO: 숫자 순서 바꾸기
 const RankingContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
